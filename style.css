@@ -14,7 +14,7 @@ html {
     --gray: #414141;
   }
   .p1 {
-    background-image: url(/img/artem-bryzgalov-phmgfNIITL8-unsplash\ 1.png);
+    background-image: url(img/artem-bryzgalov-phmgfNIITL8-unsplash\ 1.png);
     background-size: cover;
     height: 100vh;
     display: flex;
@@ -117,7 +117,7 @@ html {
   section.p2 .imgs .background {
     height: 400px;
     width: 118px;
-    background-image: url(/img/1-\ The\ Forbidden\ City\,\ Beijing.png);
+    background-image: url(img/1-\ The\ Forbidden\ City\,\ Beijing.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -128,19 +128,19 @@ html {
     filter: grayscale(0.8);
   }
   section.p2 .imgs .background:nth-child(2) {
-    background-image: url(/img/2-\ The\ Acropolis\,\ Athens.png);
+    background-image: url(img/2-\ The\ Acropolis\,\ Athens.png);
   }
   section.p2 .imgs .background:nth-child(3) {
-    background-image: url(/img/Jerusalem.png);
+    background-image: url(img/Jerusalem.png);
   }
   section.p2 .imgs .background:nth-child(4) {
-    background-image: url(/img/4-\ The\ Eiffel\ Tower\,\ Paris.png);
+    background-image: url(img/4-\ The\ Eiffel\ Tower\,\ Paris.png);
   }
   section.p2 .imgs .background:nth-child(5) {
-    background-image: url(/img/5-\ Chichen\ Itza.png);
+    background-image: url(img/5-\ Chichen\ Itza.png);
   }
   section.p2 .imgs .background:nth-child(6) {
-    background-image: url(/img/6-\ The\ Leaning\ Tower\ of\ Pisa\,\ Italy.png);
+    background-image: url(img/6-\ The\ Leaning\ Tower\ of\ Pisa\,\ Italy.png);
   }
   section.p2 .imgs .background:hover {
     width: 400px;
@@ -289,7 +289,7 @@ html {
     gap: 1em;
   }
   section.p4 .card {
-    background-image: url("/img/Istanbul.png");
+    background-image: url("img/Istanbul.png");
     background-size: cover;
     border-radius: 10px;
     transition: 300ms ease;
@@ -305,10 +305,10 @@ html {
     font-weight: 500;
   }
   section.p4 .card:nth-child(2) {
-    background-image: url(/img/Japan.png);
+    background-image: url(img/Japan.png);
   }
   section.p4 .card:nth-child(3) {
-    background-image: url(/img/Dubai.png);
+    background-image: url(img/Dubai.png);
   }
   section.p4 .card-content {
     padding: 20px 25px;
