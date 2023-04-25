@@ -1,0 +1,800 @@
+html {
+    scroll-behavior: smooth;
+    transition: scroll-position 10.5s cubic-bezier(0.65, 0, 0.35, 1);
+  }
+  body {
+    margin: 0;
+    font-family: "inter";
+    background-color: #0b0b0a;
+    overflow: hidden;
+  }
+  :root {
+    --white: #fff;
+    --black: #222;
+    --gray: #414141;
+  }
+  .p1 {
+    background-image: url(/img/artem-bryzgalov-phmgfNIITL8-unsplash\ 1.png);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8em;
+  }
+  header {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+    padding: 1.6em 0 0 0;
+    top: 0;
+  }
+  header ul li {
+    list-style: none;
+    cursor: pointer;
+  }
+  header ul {
+    display: flex;
+    color: var(--black);
+    padding: 0;
+    gap: 5em;
+  }
+  header .logo {
+    font-weight: 700;
+    font-size: 1.3em;
+    cursor: pointer;
+  }
+  header .login {
+    cursor: pointer;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.72em 1.8em;
+    border-radius: 10px;
+    font-weight: 400;
+  }
+  .p1 .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9em;
+    font-weight: 800;
+    width: 443px;
+    text-align: center;
+    color: var(--black);
+    animation: slide-out 1s forwards;
+  }
+  .p1 .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--black);
+    background-color: var(--white);
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    scroll-snap-align: start;
+  }
+  .mouse {
+    width: 25px;
+    height: 40px;
+    border: 1px solid rgb(196, 196, 196);
+    background-color: transparent;
+    border-radius: 13px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    bottom: 5em;
+  }
+  .scroll {
+    width: 3px;
+    height: 10px;
+    background-color: rgb(196, 196, 196);
+    border-radius: 2px;
+    position: absolute;
+    bottom: 9px;
+    animation: move_918 1.5s linear infinite;
+  }
+  @keyframes move_918 {
+    0% {
+      bottom: 9px;
+    }
+    50% {
+      bottom: 5px;
+    }
+    100% {
+      bottom: 9px;
+    }
+  }
+  section.p2 .imgs .background {
+    height: 400px;
+    width: 118px;
+    background-image: url(/img/1-\ The\ Forbidden\ City\,\ Beijing.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 1.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.7s ease;
+    border-radius: 8px;
+    cursor: pointer;
+    filter: grayscale(0.8);
+  }
+  section.p2 .imgs .background:nth-child(2) {
+    background-image: url(/img/2-\ The\ Acropolis\,\ Athens.png);
+  }
+  section.p2 .imgs .background:nth-child(3) {
+    background-image: url(/img/Jerusalem.png);
+  }
+  section.p2 .imgs .background:nth-child(4) {
+    background-image: url(/img/4-\ The\ Eiffel\ Tower\,\ Paris.png);
+  }
+  section.p2 .imgs .background:nth-child(5) {
+    background-image: url(/img/5-\ Chichen\ Itza.png);
+  }
+  section.p2 .imgs .background:nth-child(6) {
+    background-image: url(/img/6-\ The\ Leaning\ Tower\ of\ Pisa\,\ Italy.png);
+  }
+  section.p2 .imgs .background:hover {
+    width: 400px;
+    filter: grayscale(0);
+    box-shadow: inset 0 -120px 120px -120px black,
+      inset 0 -120px 120px -120px black;
+  }
+  section.p2 .imgs .background:hover::after {
+    content: "Saint Petersburg";
+    animation: 0.7s aa cubic-bezier(0.7, 0, 0.84, 0);
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    font-size: 1.3em;
+    width: auto;
+    color: var(--white);
+  }
+  section.p2 .imgs .background:hover:nth-child(2)::after {
+    content: "The Acropolis";
+  }
+  section.p2 .imgs .background:hover:nth-child(3)::after {
+    content: "Old City of Jerusalem";
+  }
+  section.p2 .imgs .background:hover:nth-child(4)::after {
+    content: "The Eiffel Tower";
+  }
+  section.p2 .imgs .background:hover:nth-child(5)::after {
+    content: "Chichen Itza";
+  }
+  section.p2 .imgs .background:hover:nth-child(6)::after {
+    content: "The Leaning Tower of Pisa";
+  }
+  @keyframes aa {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  section.p2 .imgs {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    width: 48em;
+    padding-bottom: 2.5em;
+  }
+  section.p1 {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+    background-position-y: top;
+    background-position-x: center;
+    transition: unset;
+    background-size: 120%;
+    background-repeat: no-repeat;
+  }
+  section {
+    padding: 0 249px;
+    height: 100vh;
+    justify-content: center;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  section.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+  section.p2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    align-items: center;
+  }
+  section.p2 .title {
+    color: var(--white);
+    font-size: 1.8em;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+  }
+  section.p3 .title {
+    color: var(--white);
+    font-size: 1.8em;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+  }
+  section.p3 .cards .card {
+    width: 18em;
+    height: 20em;
+    border-radius: 10px;
+    border: 3px solid var(--black);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  section.p3 .cards {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    padding-bottom: 2.5em;
+  }
+  section.p3 {
+    gap: 4em;
+    display: flex;
+    flex-direction: column;
+  }
+  section.p3 .cards .card .circle {
+    background-color: var(--white);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  section.p3 .cards .card .title {
+    font-size: 1em;
+  }
+  section.p3 .cards .card .desc {
+    color: #8a8a8a;
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.9em;
+    width: 250px;
+  }
+  section.p3 .cards .card:hover {
+    transform: translateY(-10px);
+  }
+  section.p4 h2 {
+    margin: 0;
+  }
+  section.p4 .cards {
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    gap: 1em;
+  }
+  section.p4 .card {
+    background-image: url("/img/Istanbul.png");
+    background-size: cover;
+    border-radius: 10px;
+    transition: 300ms ease;
+    overflow: hidden;
+    cursor: pointer;
+    width: 17em;
+    height: 22em;
+    position: relative;
+  }
+  section.p4 .card-title {
+    font-size: 1.3em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+  }
+  section.p4 .card:nth-child(2) {
+    background-image: url(/img/Japan.png);
+  }
+  section.p4 .card:nth-child(3) {
+    background-image: url(/img/Dubai.png);
+  }
+  section.p4 .card-content {
+    padding: 20px 25px;
+    position: absolute;
+    bottom: -7em;
+    transition: 300ms ease;
+  }
+  section.p4 .card-btn {
+    display: flex;
+    justify-content: center;
+    background-color: var(--white);
+    padding: 0.7em 1.4em;
+    width: fit-content;
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: var(--black);
+  }
+  section.p4 .card-text {
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+    color: rgb(255 255 255 / 0.8);
+  }
+  section.p4 .card:hover {
+    box-shadow: inset 0px -2000px 20px 0 #00000088;
+  }
+  section.p4 .card:hover .card-title::after {
+    transform: scalex(1);
+  }
+  section.p4 .card:hover .card-content {
+    bottom: 0;
+  }
+  section.p4 .card-content:nth-child(2) {
+    padding: 0px 20px;
+  }
+  section.p4 .title {
+    color: var(--white);
+    font-size: 1.8em;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+  }
+  section.p4 {
+    gap: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  section.p4 .btn {
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: 15px 25px;
+    font-size: 0.9em;
+    font-weight: 400;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  section.p4 .btn:hover {
+    color: var(--black);
+  }
+  section.p4 .btn::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: var(--white);
+    z-index: -1;
+    transition: all 0.7s;
+  }
+  section.p4 .btn:hover::before {
+    width: 160%;
+  }
+  section.p5 .title {
+    color: var(--white);
+    font-size: 1.8em;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+  }
+  section.p5 .Feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4em;
+    width: 100%;
+    padding-bottom: 2.5em;
+  }
+  section.p5 {
+    gap: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  section.p5 .Feedback .Groups .Group .name {
+    color: var(--white);
+    font-size: 1.27em;
+  }
+  section.p5 .Feedback .Groups .Group .desc {
+    color: #8a8a8a;
+    width: 250px;
+    font-weight: 300;
+    text-align: center;
+  }
+  section.p5 .Feedback .Groups .Group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7em;
+  }
+  section.p5 .Feedback .Groups {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 7em;
+  }
+  section.p5 .Feedback .Groups .icon {
+    background-color: var(--black);
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section.p5 .Feedback .Groups .icon img {
+    width: 35px;
+  }
+  section.p5 .Feedback .Groups .Group:nth-child(2) .icon {
+    background-color: var(--white);
+  }
+  section.p6 .title {
+    color: var(--white);
+    font-size: 1.8em;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+  }
+  section.p6 .first-slide {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+  section.p6 .last-slide {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+  section.p6 .last-slide form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+    align-items: center;
+  }
+  section.p6 {
+    display: flex;
+    justify-content: center;
+  }
+  section.p6 .first-slide .Groups .Group {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  section.p6 .first-slide .Groups .container {
+    display: flex;
+    gap: 2em;
+  }
+  section.p6 .first-slide .Groups {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+  section.p6 .first-slide .Groups .title {
+    font-size: 1.3em;
+    font-weight: 400;
+  }
+  section.p6 .first-slide .Groups .desc {
+    color: #999;
+  }
+  section.p6 .Contact {
+    display: flex;
+    gap: 9em;
+    align-items: center;
+  }
+  section.p6 .last-slide form input.btn {
+    cursor: pointer;
+    border: unset;
+    font-family: "inter";
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--black);
+    background-color: var(--white);
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-top: 0.8em;
+  }
+  section.p6 .last-slide form .main-input {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #999;
+    height: 2.5em;
+    font-family: "inter";
+    font-size: 1em;
+    width: 19.1em;
+    resize: none;
+    display: block;
+    transition: 0.5s;
+    color: var(--white);
+  }
+  section.p6 .last-slide form textarea.main-input {
+    padding: 0 0 47px 0;
+    outline: none;
+    margin-top: 1em;
+  }
+  section.p6 .last-slide form .main-input:focus {
+    outline: none;
+    color: var(--white);
+    border-bottom: 2px solid var(--white);
+  }
+  section.p6 .first-slide .Group .icons {
+    display: flex;
+    gap: 1em;
+  }
+  section.p6 .first-slide .Group .icons img {
+    width: 35px;
+    cursor: pointer;
+  }
+  footer {
+    background-color: #151515;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 270px;
+  }
+  .footer .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 7em;
+  }
+  .footer .row {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    text-transform: capitalize;
+  }
+  .footer .row ul li {
+    list-style: none;
+  }
+  .footer .row ul li a {
+    text-decoration: none;
+    color: #767676;
+    transition-duration: 0.5s;
+  }
+  .footer .footer-col {
+    font-size: 15px;
+    color: var(--white);
+  }
+  .footer .footer-col ul {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .footer h4 {
+    font-size: 17px;
+    margin: 0;
+    font-weight: 500;
+  }
+  .footer .row ul li a:hover {
+    color: var(--color);
+  }
+  .footer .logo img {
+    display: flex;
+    width: 170px;
+    cursor: pointer;
+  }
+  .footer .logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #eee;
+    width: max-content;
+  }
+  .footer .Group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: max-content;
+    gap: 10px;
+  }
+  .footer .Group .desc {
+    color: #5c5c5c;
+    width: 200px;
+    font-size: 0.95em;
+    font-weight: 400;
+  }
+  @keyframes slide-out {
+    from {
+      opacity: 0;
+      margin-top: -120px;
+    }
+    to {
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+  
+  input:focus {
+    border: unset;
+    outline: unset !important;
+  }
+  .onepage-wrapper .section {
+    width: 100%;
+    height: 100%;
+    padding: 0 !important;
+    position: absolute;
+  }
+  
+  @media only screen and (min-width: 300px) and (max-width: 800px) {
+    section.p1 {
+      background-size: 330%;
+    }
+    .p1 .title {
+      font-size: 1.5em;
+      width: 309px;
+    }
+    header ul {
+      display: none;
+    }
+    header .login {
+      display: none;
+    }
+    section.p2 .imgs {
+      width: 20em;
+    }
+    section.p2 .imgs .background:nth-child(5),
+    .background:nth-child(6) {
+      display: none;
+    }
+    section.p2 .title {
+      font-size: 1.5em;
+      width: 200px;
+      text-align: center;
+    }
+    section.p3 .title {
+      font-size: 1.5em;
+      width: 200px;
+      text-align: center;
+    }
+    section.p6 .first-slide {
+      display: none;
+    }
+    section.p6 .title {
+      font-size: 1.5em;
+      justify-content: center;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3em;
+      cursor: pointer;
+    }
+    .menu span {
+      display: block;
+      height: 3px;
+      width: 25px;
+      border-radius: 10px;
+      background-color: #1d1d1d;
+    }
+    .p1 .btn {
+      padding: 14px 23px;
+    }
+    section.p3 {
+      align-items: center;
+    }
+    section.p4 .title {
+      font-size: 1.5em;
+      justify-content: center;
+    }
+    section.p5 .title {
+      font-size: 1.5em;
+      text-align: center;
+    }
+    section.p6 .last-slide form input.btn {
+      padding: 14px 21px;
+    }
+    section.p4 {
+      gap: 2em;
+    }
+    section.p4 .card-title {
+      font-size: 1.2em;
+    }
+    section.p4 .card {
+      width: 15.7em;
+      height: 20em;
+    }
+    section.p4 .card-content {
+      bottom: -8em;
+    }
+    section.p4 .btn {
+      padding: 12px 22px;
+    }
+    .section {
+      overflow: hidden !important;
+    }
+    section.p3 .cards .card:nth-child(1),
+    section.p3 .cards .card:nth-child(2) {
+      display: none;
+    }
+    section.p4 .card:nth-child(1),
+    section.p4 .card:nth-child(3) {
+      display: none;
+    }
+    section.p5 .Feedback .Groups .Group:nth-child(1),
+    section.p5 .Feedback .Groups .Group:nth-child(3) {
+      display: none;
+    }
+    section.p3 .cards .card {
+      width: 17em;
+      height: 19em;
+    }
+    section.p3 .cards .card .desc {
+      font-size: 0.8em;
+      width: 214px;
+    }
+    section.p5 .Feedback .Groups .Group .name {
+      font-size: 1em;
+    }
+    section.p5 .Feedback .Groups .Group .desc {
+      font-size: 0.9em;
+    }
+    header {
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      gap: 8em;
+    }
+    header .logo {
+      font-size: 1.2em;
+    }
+    .onepage-pagination {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+    .menu {
+      display: none;
+    }
+  }
+  @media only screen and (min-width: 800px) and (max-width: 1000px) {
+    section.p2 .imgs .background:nth-child(5) {
+      display: none;
+    }
+    section.p2 .imgs {
+      width: 38em;
+    }
+    section.p3 .cards .card:first-child {
+      display: none;
+    }
+    section.p4 .card:last-child {
+      display: none;
+    }
+    section.p5 .Feedback .Groups .Group:first-child {
+      display: none;
+    }
+    section.p6 .first-slide {
+      display: none;
+    }
+    section.p1 {
+      background-size: 330%;
+    }
+  }
+  
